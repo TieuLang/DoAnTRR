@@ -1,0 +1,236 @@
+body
+{
+    margin: 0 auto; /* canh bố cục đều 2 bên */
+    padding: 0;
+    width:  1490px;
+}
+ 
+html body div.wrap
+{
+    width: 1490px; /* kích thước chiều rộng trang web */
+    float: left; /* canh div từ trái sang */
+}
+ 
+/* id="header" thì phải định nghĩa bằng dấu # và tên id (header) */
+html body div.wrap div#header 
+{
+  background-color:#d7385e;
+  color: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 60%;
+      grid-template-columns: 30% 60%;
+  -webkit-column-gap: 10%;
+          column-gap: 10%;
+  padding: 0% 5%;
+}
+
+html body div.wrap div#header div.array-inputs {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60% 40%;
+      grid-template-columns: 60% 40%;
+  place-content: center;
+  padding: 5% 0%;
+}
+
+html body div.wrap div#header div.array-inputs input#a_size {
+  background-color: black;
+  padding: 0% 0%;
+}
+
+html body div.wrap div#header div.array-inputs input#a_speed {
+  padding: 0% 0%;
+}
+
+html body div.wrap div#header div.array-inputs button#a_generate {
+  background-color: white;
+  border: none;
+  color: black;
+  text-align: center;
+  width: 100px;
+  height: 20px;
+  margin: 0px 250px;
+}
+
+html body div.wrap div#header div.array-inputs button#a_generate:hover {
+  cursor: pointer;
+}
+
+html body div.wrap div#header div.header_right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+html body div.wrap div#header div.header_right p.nav-heading {
+  font-size: 30px;
+
+}
+
+html body div.wrap div#header div.header_righ div.algos {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (16.66667%);
+      grid-template-columns: repeat(6, 16.66667%);
+  place-content: center;
+  padding: 2% 0%;
+}
+
+html body div.wrap div#header div.header_righ div.algos button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  padding: 5% 0%;
+  font-size: x-large;
+}
+
+html body div.wrap div#header div.header_righ div.algos button:hover {
+  background-color: #400082;
+  cursor: pointer;
+}
+
+html body div.wrap div#header div.header_righ div.algos .butt_locked {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+html body div.wrap div#header div.header_righ div.algos .butt_locked:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+html body div.wrap div#header div.header_righ div.algos .butt_selected {
+  color: black;
+}
+
+html body div.wrap div#header div.header_righ div.algos .butt_selected:hover {
+  cursor: pointer;
+}
+
+html body div.wrap div#header div.header_righ div.algos .butt_unselected:hover {
+
+  cursor: pointer;
+}
+ 
+.main
+{
+    width: 1490px; /* kích thước chiều rộng trang web */
+    float: left; /* canh div từ trái sang */
+}
+ 
+/* chiều rộng của 2 vùng div "nav" và "content" phải bằng tổng độ rộng của trang */
+/* chú ý padding, border, margin có thể ảnh hưởng đến độ rộng của trang web */
+.nav
+{
+    width: 400px; /* kích thước chiều rộng của vùng thanh bên */
+    height: 562px;
+    float: left; /* canh div từ trái sang */
+    
+    background-color: lightgreen; /* tạo màu để dễ nhìn */
+}
+ 
+.content
+{
+    width: 1090px; /* kích thước chiều rộng của vùng nội dung */
+    height: 562px;
+    float:left;
+    background-color: darkblue; /* tạo màu để dễ nhìn */
+}
+
+#ct_left
+{
+    width: 980px;
+    height: 562px;
+    float:left;
+    background-color: black;
+}
+
+#ct_right
+{
+    width: 110px;
+    height: 562px;
+    float:right;
+    background-color: lightblue;
+}
+
+#array
+{
+    width: 980px;
+    height: 377px;
+    float:none;
+    background-color:white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: flex-end;
+}
+
+#stt
+{
+    width: 980px;
+    height: 185px;
+    float:none;
+    background-color: darksalmon;
+}
+
+
+
+#footer
+{
+    width: 1490px; /* kích thước chiều rộng của vùng nội dung */
+    float: left; /* canh div từ trái sang */
+    background-color: pink; /* tạo màu để dễ nhìn */
+}
+.array-inputs
+{
+    display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60% 40%;
+      grid-template-columns: 60% 40%;
+  place-content: center;
+  padding: 5% 0%;
+}
+    
+#box1{
+  height:20px;
+  width:20px;
+  background-color: #d7385e;
+}
+
+#box2{
+  height:20px;
+  width:20px;
+  background-color: yellow;
+}
+
+#box3{
+  height:20px;
+  width:20px;
+  background-color: #400082;
+}
+
+#box4{
+  height:20px;
+  width:20px;
+  background-color: #428b46;
+}
+
+pp
+{
+  padding-left: 35%;
+}
+
+div.ktstt
+{
+  padding-left: 10px;
+}
+
+.addcolor{
+  background-color: red;
+}

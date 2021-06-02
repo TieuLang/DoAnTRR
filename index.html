@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+<link rel="stylesheet" href="style.css">
+
+ 
+</head>
+ 
+<body>
+ 
+<div class="wrap"> <!-- sử dụng 1 div bao hết nội dung web lại -->
+ 
+    <div id="header"> <!-- phần header --><!-- dùng thẻ br để xuống dòng làm vùng to ra dễ nhìn -->
+        <div class="array-inputs">
+            <p>Size of the array:</p>
+            <input id="a_size" type="range" min=10 max=20 step=1 value=15>
+            <p>Speed of the algorithm:</p>
+            <input id="a_speed" type="range" min=1 max=5 step=1 value=4>
+            <button id="a_generate">Tạo mảng</button>
+        </div>
+
+        <div class="header_right">
+            <p class="nav-heading">MÔ PHỎNG SẮP XẾP </p>
+            <div class="algos">
+                <button>Bubble</button>
+                <button>Selection</button>
+                <button>Insertion</button>
+                <button>Merge</button>
+                <button style="margin-right: 0px;">Radix Sort</button>
+            </div>
+        </div>
+    </div>
+     
+    <div class="main"> <!-- bao phần nội dung chính -->
+        <div class="nav">
+            <section>
+
+                <div class="Info_Cont1" >
+                  <!--Bubble sort code-->
+<p>
+<pre id="bbl">
+  Bubblesort(){
+    <span  id="line1">for(i = 0; i < arraySize ; i++)</span>
+      {
+        <span id="line2"> for(j = 0; j < arraySize-i-1 ; k++)</span>
+          {
+            <span id="line3">if(A[j] > A[j+1])</span>
+            {
+              <span id="line4">swap(A[j], A[j+1]);</span>
+            }
+          }
+      }
+  }
+</pre>
+</p>
+            
+  <!--Insertion Sort-->
+<p>
+<pre id="insert" style="padding-top:0px">
+  InsertionSort(){
+    <span id="line5">for(i = 1; i < arraySize; i++)</span>
+    {
+      <span id="line6">j = i-1;</span>
+      <span id="line7">x = A[i];</span>
+      <span id="line8">while(j > -1 && A[j] > x)</span>
+      {
+        <span id="line9">A[j+1] = A[j];</span>
+        <span id="line10">j--;</span>
+      }
+      <span id="line11">A[j+1] = x;</span>
+    }
+  }
+</pre>
+</p>
+            
+<!--Selection Sort-->
+<p>
+<pre id="select" style="padding-top:0px">
+  SelectionSort(){
+    <span id="line12">for(i = 0; i < arraySize-1; i++)</span>
+    {
+      <span  id="line13">for(j = k = i; j < arraySize; j++)</span>
+      {
+        <span id="line14">if(A[j] < A[k])</span>
+        <span id="line15">k = j;</span>
+      }
+      <span id="line16">swap(A[i], A[k]);</span>
+    }
+  }
+</pre>
+</p>
+            
+<!--Merge Sort-->
+<p>
+<pre id="merge" style="padding-top:0px">
+  MergeSort(B[ ], start, mid, end){
+    <span id="line17">p = start, q = mid+1;</span>
+    <span id="line18">A[size], k = 0;</span>
+    <span id="line19">for(i = start; i <= end; i++)</span>
+    {
+      <span id="line20">if(p > mid)</span>
+        <span id="line21">A[k++] = B[q++];</span>
+      <span id="line22">else if(q > end)</span>
+       <span id="line23">A[k++] = B[p++];</span>
+      <span id="line24">else if(B[p] < B[q])</span>
+        <span id="line25">A[k++] = B[p++];</span>
+      <span id="line26">else</span>
+        <span id="line27">A[k++] = B[q++];</span>
+    }
+    <span id="line28">for(t = 0; t < k; t++)</span>
+       <span id="line29">B[start++] = A[t];</span>
+  }
+  MergePartition(start, end){
+    <span id="line30">if(start < end)</span>
+    {
+      <span id="line31">Mid=(start+end)/2</span>
+      <span id="line32">MergePartition(start, mid);</span>
+      <span id="line33">MergePartition(mid+1, end);</span>
+      <span id="line34">MergeSort(Array, start, mid, end);</span>
+    }
+  }
+</pre>
+</p>
+            
+<!--Quick Sort-->
+<p>
+<pre id="radix" style="padding-top:0px">
+  Partition(Arr[ ],start,end)
+  {
+    <span id="line35">i=start+1;</span>
+    <span id="line36">pivot=Arr[start];</span>
+    <span id="line37">for(j=start+1;j<=end;j++)</span>
+    {
+      <span id="line38">if(Arr[j] < pivot)</span>
+      {
+        <span id="line39">swap(Arr[i], Arr[j]);</span>
+        <span id="line40">i+=1;</span>
+      }
+    }
+    <span id="line41">swap(Arr[start], Arr[i-1]);</span>
+    <span id="line42">return (i-1);</span>
+  }
+  QuickSort(start, end)
+  {
+    <span id="line43">if(start < end)</span>
+    {
+      <span id="line44">pivot=Partition(Arr[], start, end)</span>
+      <span id="line45">QuickSort(start, pivot - 1);</span>
+      <span id="line46">QuickSort(Pivot+1, end);</span>
+    }
+  }
+</pre>
+</p>
+</div>
+</section>
+</div>
+         
+        <div class="content">
+            <div id="ct_left">
+                <div id="array">arr</div>
+                <div id="stt">
+                  <div class="ktstt" id="0">0: </div>
+                  <div class="ktstt" id="1">1: </div>
+                  <div class="ktstt" id="2">2: </div>
+                  <div class="ktstt" id="3">3: </div>
+                  <div class="ktstt" id="4">4: </div>
+                  <div class="ktstt" id="5">5: </div>
+                  <div class="ktstt" id="6">6: </div>
+                  <div class="ktstt" id="7">7: </div>
+                  <div class="ktstt" id="8">8: </div>
+                  <div class="ktstt" id="9">9: </div>    
+                </div>
+            </div>
+            <div id="ct_right">
+              <pre id="box1">
+    <b>Initial</b>
+                </pre>
+                <br>
+                <pre id="box2">
+    <b>Checking</b> 
+                </pre>
+                <br>
+                <pre id="box3" >
+    <b>Swapping</b> 
+                </pre>
+                <br>
+                <pre id="box4">
+    <b>Swapped</b>
+                </pre>
+            </div>
+        </div>
+    </div> <!-- kết thúc nội dung chính -->
+    
+</div> <!-- sử dụng 1 div bao hết nội dung web lại -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="setUp.js"></script>
+<script src="basicFunctions.js"></script>
+<script src="bubble.js"></script>
+<script src="radixsort.js"></script>
+</body>
+</html>

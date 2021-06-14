@@ -35,13 +35,25 @@ function div_update(cont,height,color,index)
     },c_delay+=delay_time);
 }
 
-function div_update1(cont,color,index)
+function div_update1(cont,kc1,kc2,poe1,poe2,sl,i)
 {
     window.setTimeout(function(){
-        $("#line"+index).toggleClass("addcolor");
-        divs[cont].style=" margin:0% " + margin_size + "%; width:" + (100/array_size-(2*margin_size)) + "%; height:" + height + "%; background-color:" + color + ";";
-        text[cont].textContent=div_sizes[cont];
-    },c_delay+=delay_time);
+        window.setInterval(function(){
+            if (sl<=0) {
+                window.clearInterval();
+            } else {
+                poe1 = poe1 + kc1;
+                poe2 = poe2 + kc2;
+                cont.style.top = poe1 + "px";
+                cont.style.left = poe2 + "px";
+                sl=sl-1;
+                delay=delay_time;
+            };
+        },delay_time);
+        cont.style.top=poe1+"px";
+        cont.style.left = poe2 + "px";
+    },c_delay+=delay_time*100);
+    
 }
 
 function enable_buttons()
